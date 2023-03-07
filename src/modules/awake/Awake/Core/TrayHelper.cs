@@ -57,7 +57,8 @@ namespace Awake.Core
                         _log.Error($"An error occurred initializing the tray. {ex.Message}");
                         _log.Error($"{ex.StackTrace}");
                     }
-                }, TrayIcon);
+                },
+                TrayIcon);
         }
 
         /// <summary>
@@ -105,7 +106,7 @@ namespace Awake.Core
                     PInvoke.InsertMenu(TrayMenu, 0, MENU_ITEM_FLAGS.MF_BYPOSITION | MENU_ITEM_FLAGS.MF_SEPARATOR, 0, string.Empty);
                 }
 
-                PInvoke.InsertMenu(TrayMenu, 0, MENU_ITEM_FLAGS.MF_BYPOSITION | MENU_ITEM_FLAGS.MF_STRING | (keepDisplayOn ? MENU_ITEM_FLAGS.MF_CHECKED : MENU_ITEM_FLAGS.MF_UNCHECKED), (uint)TrayCommands.TC_DISPLAY_SETTING, "Keep screen on");
+                PInvoke.InsertMenu(TrayMenu, 0, MENU_ITEM_FLAGS.MF_BYPOSITION | MENU_ITEM_FLAGS.MF_STRING | (keepDisplayOn ? MENU_ITEM_FLAGS.MF_CHECKED : MENU_ITEM_FLAGS.MF_UNCHECKED) | (mode == AwakeMode.PASSIVE ? MENU_ITEM_FLAGS.MF_DISABLED : MENU_ITEM_FLAGS.MF_ENABLED), (uint)TrayCommands.TC_DISPLAY_SETTING, "Keep screen on");
             }
 
             // In case there are no tray shortcuts defined for the application default to a
@@ -132,7 +133,7 @@ namespace Awake.Core
             TrayIcon.Text = text;
         }
 
-        private class CheckButtonToolStripMenuItemAccessibleObject : ToolStripItem.ToolStripItemAccessibleObject
+        private sealed class CheckButtonToolStripMenuItemAccessibleObject : ToolStripItem.ToolStripItemAccessibleObject
         {
             private CheckButtonToolStripMenuItem _menuItem;
 
@@ -153,7 +154,7 @@ namespace Awake.Core
             public override string Name => _menuItem.Text + ", " + Role + ", " + (_menuItem.Checked ? "Checked" : "Unchecked");
         }
 
-        private class CheckButtonToolStripMenuItem : ToolStripMenuItem
+        private sealed class CheckButtonToolStripMenuItem : ToolStripMenuItem
         {
             public CheckButtonToolStripMenuItem()
             {

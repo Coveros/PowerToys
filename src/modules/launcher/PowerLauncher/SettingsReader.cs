@@ -150,6 +150,11 @@ namespace PowerLauncher
                         _settings.ClearInputOnLaunch = overloadSettings.Properties.ClearInputOnLaunch;
                     }
 
+                    if (_settings.TabSelectsContextButtons != overloadSettings.Properties.TabSelectsContextButtons)
+                    {
+                        _settings.TabSelectsContextButtons = overloadSettings.Properties.TabSelectsContextButtons;
+                    }
+
                     if (_settings.Theme != overloadSettings.Properties.Theme)
                     {
                         _settings.Theme = overloadSettings.Properties.Theme;
@@ -159,6 +164,11 @@ namespace PowerLauncher
                     if (_settings.StartupPosition != overloadSettings.Properties.Position)
                     {
                         _settings.StartupPosition = overloadSettings.Properties.Position;
+                    }
+
+                    if (_settings.GenerateThumbnailsFromFiles != overloadSettings.Properties.GenerateThumbnailsFromFiles)
+                    {
+                        _settings.GenerateThumbnailsFromFiles = overloadSettings.Properties.GenerateThumbnailsFromFiles;
                     }
 
                     retry = false;
@@ -210,8 +220,7 @@ namespace PowerLauncher
 
         private static string GetIcon(PluginMetadata metadata, string iconPath)
         {
-            var pluginDirectory = Path.GetFileName(metadata.PluginDirectory);
-            return Path.Combine(pluginDirectory, iconPath);
+            return Path.Combine(metadata.PluginDirectory, iconPath);
         }
 
         private static IEnumerable<PowerLauncherPluginSettings> GetDefaultPluginsSettings()

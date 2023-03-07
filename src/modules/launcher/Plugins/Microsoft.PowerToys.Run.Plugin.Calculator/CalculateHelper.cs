@@ -12,14 +12,15 @@ namespace Microsoft.PowerToys.Run.Plugin.Calculator
         private static readonly Regex RegValidExpressChar = new Regex(
             @"^(" +
             @"%|" +
-            @"ceil\s*\(|floor\s*\(|exp\s*\(|max\s*\(|min\s*\(|abs\s*\(|log\s*\(|ln\s*\(|sqrt\s*\(|pow\s*\(|" +
+            @"ceil\s*\(|floor\s*\(|exp\s*\(|max\s*\(|min\s*\(|abs\s*\(|log(?:2|10)?\s*\(|ln\s*\(|sqrt\s*\(|pow\s*\(|" +
             @"factorial\s*\(|sign\s*\(|round\s*\(|rand\s*\(|" +
             @"sin\s*\(|cos\s*\(|tan\s*\(|arcsin\s*\(|arccos\s*\(|arctan\s*\(|" +
             @"sinh\s*\(|cosh\s*\(|tanh\s*\(|arsinh\s*\(|arcosh\s*\(|artanh\s*\(|" +
             @"pi|" +
             @"==|~=|&&|\|\||" +
             @"e|[0-9]|0x[0-9a-fA-F]+|0b[01]+|[\+\-\*\/\^\., ""]|[\(\)\|\!\[\]]" +
-            @")+$", RegexOptions.Compiled);
+            @")+$",
+            RegexOptions.Compiled);
 
         public static bool InputValid(string input)
         {

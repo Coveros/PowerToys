@@ -37,6 +37,19 @@ namespace Microsoft.PowerToys.Settings.UI.ViewModels
 
             Settings = moduleSettingsRepository.SettingsConfig;
 
+            InitializeEnabledValue();
+
+            _keepDisplayOn = Settings.Properties.KeepDisplayOn;
+            _mode = Settings.Properties.Mode;
+            _hours = Settings.Properties.Hours;
+            _minutes = Settings.Properties.Minutes;
+
+            // set the callback functions value to hangle outgoing IPC message.
+            SendConfigMSG = ipcMSGCallBackFunc;
+        }
+
+        private void InitializeEnabledValue()
+        {
             _enabledGpoRuleConfiguration = GPOWrapper.GetConfiguredAwakeEnabledValue();
             if (_enabledGpoRuleConfiguration == GpoRuleConfigured.Disabled || _enabledGpoRuleConfiguration == GpoRuleConfigured.Enabled)
             {
@@ -48,14 +61,6 @@ namespace Microsoft.PowerToys.Settings.UI.ViewModels
             {
                 _isEnabled = GeneralSettingsConfig.Enabled.Awake;
             }
-
-            _keepDisplayOn = Settings.Properties.KeepDisplayOn;
-            _mode = Settings.Properties.Mode;
-            _hours = Settings.Properties.Hours;
-            _minutes = Settings.Properties.Minutes;
-
-            // set the callback functions value to hangle outgoing IPC message.
-            SendConfigMSG = ipcMSGCallBackFunc;
         }
 
         public bool IsEnabled
@@ -76,6 +81,7 @@ namespace Microsoft.PowerToys.Settings.UI.ViewModels
                     GeneralSettingsConfig.Enabled.Awake = value;
                     OnPropertyChanged(nameof(IsEnabled));
                     OnPropertyChanged(nameof(IsTimeConfigurationEnabled));
+                    OnPropertyChanged(nameof(IsScreenConfigurationPossibleEnabled));
 
                     OutGoingGeneralSettings outgoing = new OutGoingGeneralSettings(GeneralSettingsConfig);
                     SendConfigMSG(outgoing.ToString());
@@ -94,6 +100,11 @@ namespace Microsoft.PowerToys.Settings.UI.ViewModels
             get => _mode == AwakeMode.TIMED && _isEnabled;
         }
 
+        public bool IsScreenConfigurationPossibleEnabled
+        {
+            get => _mode != AwakeMode.PASSIVE && _isEnabled;
+        }
+
         public AwakeMode Mode
         {
             get => _mode;
@@ -104,6 +115,7 @@ namespace Microsoft.PowerToys.Settings.UI.ViewModels
                     _mode = value;
                     OnPropertyChanged(nameof(Mode));
                     OnPropertyChanged(nameof(IsTimeConfigurationEnabled));
+                    OnPropertyChanged(nameof(IsScreenConfigurationPossibleEnabled));
 
                     Settings.Properties.Mode = value;
                     NotifyPropertyChanged();
@@ -170,6 +182,14 @@ namespace Microsoft.PowerToys.Settings.UI.ViewModels
                 string targetMessage = ipcMessage.ToJsonString();
                 SendConfigMSG(targetMessage);
             }
+        }
+
+        public void RefreshEnabledState()
+        {
+            InitializeEnabledValue();
+            OnPropertyChanged(nameof(IsEnabled));
+            OnPropertyChanged(nameof(IsTimeConfigurationEnabled));
+            OnPropertyChanged(nameof(IsScreenConfigurationPossibleEnabled));
         }
 
         private GpoRuleConfigured _enabledGpoRuleConfiguration;

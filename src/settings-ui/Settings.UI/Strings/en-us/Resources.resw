@@ -493,6 +493,18 @@
   <data name="PowerLauncher_ClearInputOnLaunch.Content" xml:space="preserve">
     <value>Clear the previous query on launch</value>
   </data>
+  <data name="PowerLauncher_TabSelectsContextButtons.Header" xml:space="preserve">
+    <value>Tab through context buttons</value>
+  </data>
+  <data name="PowerLauncher_TabSelectsContextButtons.Description" xml:space="preserve">
+    <value>Pressing tab will first select through the available context buttons of the current selection before moving onto the next result</value>
+  </data>
+  <data name="PowerLauncher_GenerateThumbnailsFromFiles.Header" xml:space="preserve">
+    <value>Generate thumbnails from files</value>
+  </data>
+  <data name="PowerLauncher_GenerateThumbnailsFromFiles.Description" xml:space="preserve">
+    <value>Results will try to generate thumbnails for files. Disabling this setting may increase stability and speed</value>
+  </data>
   <data name="PowerLauncher_SearchQueryResultsWithDelay.Header" xml:space="preserve">
     <value>Input Smoothing</value>
     <comment>This is about adding a delay to wait for more input before executing a search</comment>
@@ -825,7 +837,7 @@
   <data name="General_SettingsBackupAndRestore.Header" xml:space="preserve">
     <value>Backup and restore your settings</value>
   </data>
-	<data name="General_SettingsBackupAndRestore.Description" xml:space="preserve">
+  <data name="General_SettingsBackupAndRestore.Description" xml:space="preserve">
     <value>PowerToys will restart automatically if needed</value>
   </data>
   <data name="ShortcutGuide_Enable.Header" xml:space="preserve">
@@ -889,11 +901,14 @@
     <value>Remove</value>
     <comment>Removes a user defined setting group for Image Resizer</comment>
   </data>
+  <data name="RemoveItem.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="ImageResizer_Image.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
     <value>Image Resizer</value>
   </data>
   <data name="ImageResizer_AddSizeButton.Content" xml:space="preserve">
-    <value>Add a size</value>
+    <value>Add new size</value>
   </data>
   <data name="ImageResizer_SaveSizeButton.Label" xml:space="preserve">
     <value>Save sizes</value>
@@ -1007,7 +1022,7 @@
   <data name="GeneralSettings_AlwaysRunAsAdminText.Header" xml:space="preserve">
     <value>Always run as administrator</value>
   </data>
-	<data name="GeneralSettings_AlwaysRunAsAdminText.Description" xml:space="preserve">
+  <data name="GeneralSettings_AlwaysRunAsAdminText.Description" xml:space="preserve">
     <value>You need to run as administrator to use this setting</value>
   </data>
   <data name="GeneralSettings_RunningAsUserText" xml:space="preserve">
@@ -1266,11 +1281,11 @@ Made with 💗 by Microsoft and the PowerToys community.</value>
   <data name="MoveUp.Text" xml:space="preserve">
     <value>Move up</value>
   </data>
-	<data name="MoveDown.Text" xml:space="preserve">
+  <data name="MoveDown.Text" xml:space="preserve">
     <value>Move down</value>
   </data>
   <data name="ColorPickerAddNewFormat.Content" xml:space="preserve">
-    <value>Add custom color format</value>
+    <value>Add new format</value>
   </data>
   <data name="NewColorFormat.Header" xml:space="preserve">
     <value>Format</value>
@@ -1296,115 +1311,118 @@ Made with 💗 by Microsoft and the PowerToys community.</value>
   <data name="ColorFormatDialog.SecondaryButtonText" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="HelpLine1.Text" xml:space="preserve">
+  <data name="ColorFormatEditorHelpline1.Text" xml:space="preserve">
     <value>The following parameters can be used:</value>
   </data>
-  <data name="Help_red.Text" xml:space="preserve">
+  <data name="Help_red" xml:space="preserve">
     <value>red</value>
   </data>
-  <data name="Help_green.Text" xml:space="preserve">
+  <data name="Help_green" xml:space="preserve">
     <value>green</value>
   </data>
-  <data name="Help_blue.Text" xml:space="preserve">
+  <data name="Help_blue" xml:space="preserve">
     <value>blue</value>
   </data>
-  <data name="Help_alpha.Text" xml:space="preserve">
+  <data name="Help_alpha" xml:space="preserve">
     <value>alpha</value>
   </data>
-  <data name="Help_cyan.Text" xml:space="preserve">
+  <data name="Help_cyan" xml:space="preserve">
     <value>cyan</value>
   </data>
-  <data name="Help_magenta.Text" xml:space="preserve">
+  <data name="Help_magenta" xml:space="preserve">
     <value>magenta</value>
   </data>
-  <data name="Help_yellow.Text" xml:space="preserve">
+  <data name="Help_yellow" xml:space="preserve">
     <value>yellow</value>
   </data>
-  <data name="Help_black_key.Text" xml:space="preserve">
+  <data name="Help_black_key" xml:space="preserve">
     <value>black key</value>
   </data>
-  <data name="Help_hue.Text" xml:space="preserve">
+  <data name="Help_hue" xml:space="preserve">
     <value>hue</value>
   </data>
-  <data name="Help_hueNat.Text" xml:space="preserve">
+  <data name="Help_hueNat" xml:space="preserve">
     <value>hue (natural)</value>
   </data>
-  <data name="Help_saturationI.Text" xml:space="preserve">
+  <data name="Help_saturationI" xml:space="preserve">
     <value>saturation (HSI)</value>
   </data>
-  <data name="Help_saturationL.Text" xml:space="preserve">
+  <data name="Help_saturationL" xml:space="preserve">
     <value>saturation (HSL)</value>
   </data>
-  <data name="Help_saturationB.Text" xml:space="preserve">
+  <data name="Help_saturationB" xml:space="preserve">
     <value>saturation (HSB)</value>
   </data>
-  <data name="Help_brightness.Text" xml:space="preserve">
+  <data name="Help_brightness" xml:space="preserve">
     <value>brightness</value>
   </data>
-  <data name="Help_intensity.Text" xml:space="preserve">
+  <data name="Help_intensity" xml:space="preserve">
     <value>intensity</value>
   </data>
-  <data name="Help_lightnessNat.Text" xml:space="preserve">
+  <data name="Help_lightnessNat" xml:space="preserve">
     <value>lightness (nat)</value>
   </data>
-  <data name="Help_lightnessCIE.Text" xml:space="preserve">
+  <data name="Help_lightnessCIE" xml:space="preserve">
     <value>lightness (CIE)</value>
   </data>
-  <data name="Help_value.Text" xml:space="preserve">
+  <data name="Help_value" xml:space="preserve">
     <value>value</value>
   </data>
-  <data name="Help_whiteness.Text" xml:space="preserve">
+  <data name="Help_whiteness" xml:space="preserve">
     <value>whiteness</value>
   </data>
-  <data name="Help_blackness.Text" xml:space="preserve">
+  <data name="Help_blackness" xml:space="preserve">
     <value>blackness</value>
   </data>
-  <data name="Help_chromaticityA.Text" xml:space="preserve">
+  <data name="Help_chromaticityA" xml:space="preserve">
     <value>chromaticityA</value>
   </data>
-  <data name="Help_chromaticityB.Text" xml:space="preserve">
+  <data name="Help_chromaticityB" xml:space="preserve">
     <value>chromaticityB</value>
   </data>
-  <data name="Help_X_value.Text" xml:space="preserve">
+  <data name="Help_X_value" xml:space="preserve">
     <value>X value</value>
   </data>
-  <data name="Help_Y_value.Text" xml:space="preserve">
+  <data name="Help_Y_value" xml:space="preserve">
     <value>Y value</value>
   </data>
-  <data name="Help_Z_value.Text" xml:space="preserve">
+  <data name="Help_Z_value" xml:space="preserve">
     <value>Z value</value>
   </data>
-  <data name="Help_decimal_value.Text" xml:space="preserve">
-    <value>decimal value</value>
+  <data name="Help_decimal_value_RGB" xml:space="preserve">
+    <value>decimal value (RGB)</value>
   </data>
-  <data name="Help_color_name.Text" xml:space="preserve">
+  <data name="Help_decimal_value_BGR" xml:space="preserve">
+    <value>decimal value (BGR)</value>
+  </data>
+  <data name="Help_color_name" xml:space="preserve">
     <value>color name</value>
   </data>
-  <data name="HelpLine2.Text" xml:space="preserve">
+  <data name="ColorFormatEditorHelpline2.Text" xml:space="preserve">
     <value>The red, green, blue and alpha values can be formatted to the following formats:</value>
   </data>
-  <data name="Help_byte.Text" xml:space="preserve">
+  <data name="Help_byte" xml:space="preserve">
     <value>byte value (default)</value>
   </data>
-  <data name="Help_hexL1.Text" xml:space="preserve">
+  <data name="Help_hexL1" xml:space="preserve">
     <value>hex lowercase one digit</value>
   </data>
-  <data name="Help_hexU1.Text" xml:space="preserve">
+  <data name="Help_hexU1" xml:space="preserve">
     <value>hex uppercase one digit</value>
   </data>
-  <data name="Help_hexL2.Text" xml:space="preserve">
+  <data name="Help_hexL2" xml:space="preserve">
     <value>hex lowercase two digits</value>
   </data>
-  <data name="Help_hexU2.Text" xml:space="preserve">
+  <data name="Help_hexU2" xml:space="preserve">
     <value>hex uppercase two digits</value>
   </data>
-  <data name="Help_floatWith.Text" xml:space="preserve">
+  <data name="Help_floatWith" xml:space="preserve">
     <value>float with leading zero</value>
   </data>
-  <data name="Help_floatWithout.Text" xml:space="preserve">
+  <data name="Help_floatWithout" xml:space="preserve">
     <value>float without leading zero</value>
   </data>
-  <data name="HelpLine3.Text" xml:space="preserve">
+  <data name="ColorFormatEditorHelpline3.Text" xml:space="preserve">
     <value>Example:  %ReX means red value in hex uppercase two digits format.</value>
   </data>
   <data name="ColorPicker_ShowColorName.Header" xml:space="preserve">
@@ -1810,6 +1828,9 @@ From there, simply click on one of the supported files in the File Explorer and 
   <data name="Awake_EnableDisplayKeepAwake.Header" xml:space="preserve">
     <value>Keep screen on</value>
   </data>
+  <data name="Awake_EnableDisplayKeepAwake.Description" xml:space="preserve">
+    <value>This setting is only available when keeping the PC awake</value>
+  </data>
   <data name="Awake_Mode.Header" xml:space="preserve">
     <value>Mode</value>
   </data>
@@ -1955,6 +1976,10 @@ From there, simply click on one of the supported files in the File Explorer and 
     <value>Learn more about Mouse utilities</value>
     <comment>Mouse utilities is a product name, do not loc</comment>
   </data>
+  <data name="LearnMore_PastePlain.Text" xml:space="preserve">
+    <value>Learn more about Paste as Plain Text</value>
+    <comment> Paste as Plain Text is the name of the module. </comment>
+  </data>
   <data name="LearnMore_PowerPreview.Text" xml:space="preserve">
     <value>Learn more about File Explorer add-ons</value>
     <comment>File Explorer is a product name, localize as Windows does</comment>
@@ -2000,7 +2025,7 @@ From there, simply click on one of the supported files in the File Explorer and 
     <comment>Mouse as in the hardware peripheral.</comment>
   </data>
   <data name="Oobe_MouseUtils_MouseHighlighter_Description.Text" xml:space="preserve">
-    <value>Use a keyboard shortcut highlight left and right mouse clicks.</value>
+    <value>Use a keyboard shortcut to highlight left and right mouse clicks.</value>
     <comment>Mouse as in the hardware peripheral.</comment>
   </data>
   <data name="Oobe_MouseUtils_MousePointerCrosshairs.Text" xml:space="preserve">
@@ -2009,6 +2034,14 @@ From there, simply click on one of the supported files in the File Explorer and 
   </data>
   <data name="Oobe_MouseUtils_MousePointerCrosshairs_Description.Text" xml:space="preserve">
     <value>Draw crosshairs centered around the mouse pointer.</value>
+    <comment>Mouse as in the hardware peripheral.</comment>
+  </data>
+  <data name="Oobe_MouseUtils_MouseJump.Text" xml:space="preserve">
+    <value>Mouse Jump</value>
+    <comment>Mouse as in the hardware peripheral.</comment>
+  </data>
+  <data name="Oobe_MouseUtils_MouseJump_Description.Text" xml:space="preserve">
+    <value>Jump the mouse pointer quickly to anywhere on your desktop.</value>
     <comment>Mouse as in the hardware peripheral.</comment>
   </data>
   <data name="Launch_Run.Content" xml:space="preserve">
@@ -2553,6 +2586,9 @@ Activate by holding the key for the character you want to add an accent to, then
   <data name="LearnMore_TextExtractor.Text" xml:space="preserve">
     <value>Learn more about Text Extractor</value>
   </data>
+  <data name="TextExtractor_Cancel" xml:space="preserve">
+    <value>cancel</value>
+  </data>
   <data name="General_SettingsBackupAndRestore_NothingToBackup" xml:space="preserve">
     <value>A new backup was not created because no settings have been changed since last backup.</value>
   </data>
@@ -2666,6 +2702,18 @@ Activate by holding the key for the character you want to add an accent to, then
   <data name="QuickAccent_Description_Indicator.Header" xml:space="preserve">
     <value>Show the Unicode code and name of the currently selected character</value>
   </data>
+  <data name="QuickAccent_SortByUsageFrequency_Indicator.Header" xml:space="preserve">
+    <value>Sort characters by usage frequency</value>
+  </data>
+  <data name="QuickAccent_SortByUsageFrequency_Indicator.Description" xml:space="preserve">
+    <value>Track characters usage frequency and sort them accordingly</value>
+  </data>
+  <data name="QuickAccent_StartSelectionFromTheLeft_Indicator.Header" xml:space="preserve">
+    <value>Start selection from the left</value>
+  </data>
+  <data name="QuickAccent_StartSelectionFromTheLeft_Indicator.Description" xml:space="preserve">
+    <value>Start selection from the leftmost character for all activation keys, including left and right arrows</value>
+  </data>
   <data name="QuickAccent_DisableFullscreen.Header" xml:space="preserve">
     <value>Disable when Game Mode is On</value>
   </data>
@@ -2695,7 +2743,7 @@ Activate by holding the key for the character you want to add an accent to, then
   </data>
   <data name="QuickAccent_SelectedLanguage_Gaeilge.Content" xml:space="preserve">
     <value>Gaeilge</value>
-    <comment>Irish Gaelic</comment>
+    <comment>Gaelic language spoken in Ireland</comment>
   </data>
   <data name="QuickAccent_SelectedLanguage_Gaidhlig.Content" xml:space="preserve">
     <value>Gàidhlig</value>
@@ -2704,14 +2752,29 @@ Activate by holding the key for the character you want to add an accent to, then
   <data name="QuickAccent_SelectedLanguage_German.Content" xml:space="preserve">
     <value>German</value>
   </data>
+  <data name="QuickAccent_SelectedLanguage_Hebrew.Content" xml:space="preserve">
+    <value>Hebrew</value>
+  </data>
   <data name="QuickAccent_SelectedLanguage_French.Content" xml:space="preserve">
     <value>French</value>
+  </data>
+  <data name="QuickAccent_SelectedLanguage_Estonian.Content" xml:space="preserve">
+    <value>Estonian</value>
+  </data>
+  <data name="QuickAccent_SelectedLanguage_Lithuanian.Content" xml:space="preserve">
+    <value>Lithuanian</value>
+  </data>
+  <data name="QuickAccent_SelectedLanguage_Macedonian.Content" xml:space="preserve">
+    <value>Macedonian</value>
   </data>
   <data name="QuickAccent_SelectedLanguage_Maori.Content" xml:space="preserve">
     <value>Maori</value>
   </data>
   <data name="QuickAccent_SelectedLanguage_Dutch.Content" xml:space="preserve">
     <value>Dutch</value>
+  </data>
+  <data name="QuickAccent_SelectedLanguage_Norwegian.Content" xml:space="preserve">
+    <value>Norwegian</value>
   </data>
   <data name="QuickAccent_SelectedLanguage_Pinyin.Content" xml:space="preserve">
     <value>Pinyin</value>
@@ -2785,6 +2848,10 @@ Activate by holding the key for the character you want to add an accent to, then
     <value>Launch Host File Editor</value>
     <comment>"Host File Editor" is a product name</comment>
   </data>
+  <data name="Hosts_LaunchButton_Accessible.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Launch Host File Editor</value>
+    <comment>"Host File Editor" is a product name</comment>
+  </data>
   <data name="Hosts_AdditionalLinesPosition.Header" xml:space="preserve">
     <value>Position of additional content</value>
   </data>
@@ -2794,8 +2861,8 @@ Activate by holding the key for the character you want to add an accent to, then
   <data name="Hosts_AdditionalLinesPosition_Top.Content" xml:space="preserve">
     <value>Top</value>
   </data>
-  <data name="Hosts_File_GroupSettings.Header" xml:space="preserve">
-    <value>File</value>
+  <data name="Hosts_Behavior_GroupSettings.Header" xml:space="preserve">
+    <value>Behavior</value>
   </data>
   <data name="Launch_Hosts.Content" xml:space="preserve">
     <value>Launch Hosts File Editor</value>
@@ -2838,9 +2905,155 @@ Activate by holding the key for the character you want to add an accent to, then
     <comment>File Locksmith is the name of the utility</comment>
   </data>
   <data name="GPO_IsSettingForced.Title" xml:space="preserve">
-    <value>The systems administrator is forcing this setting.</value>
+    <value>The system administrator is forcing this setting.</value>
   </data>
   <data name="Hosts_AdditionalLinesPosition.Description" xml:space="preserve">
     <value>Additional content includes the file header and lines that can't parse</value>
+  </data>
+  <data name="TextExtractor_Languages.Header" xml:space="preserve">
+    <value>Preferred language</value>
+  </data>
+  <data name="Alternate_OOBE_AlwaysOnTop_Description.Text" xml:space="preserve">
+    <value>Pin a window so that:</value>
+  </data>
+  <data name="Alternate_OOBE_AlwaysOnTop_Title.Text" xml:space="preserve">
+    <value>Always On Top</value>
+  </data>
+  <data name="Alternate_OOBE_ColorPicker_Description.Text" xml:space="preserve">
+    <value>To pick a color:</value>
+  </data>
+  <data name="Alternate_OOBE_ColorPicker_Title.Text" xml:space="preserve">
+    <value>Color Picker</value>
+  </data>
+  <data name="Alternate_OOBE_Description.Text" xml:space="preserve">
+    <value>Here are a few shortcuts to get you started:</value>
+  </data>
+  <data name="Alternate_OOBE_FancyZones_Description.Text" xml:space="preserve">
+    <value>To open the FancyZones editor, press:</value>
+  </data>
+  <data name="Alternate_OOBE_FancyZones_Title.Text" xml:space="preserve">
+    <value>FancyZones</value>
+  </data>
+  <data name="Alternate_OOBE_Run_Description.Text" xml:space="preserve">
+    <value>Get access to your files and more:</value>
+  </data>
+  <data name="Alternate_OOBE_Run_Title.Text" xml:space="preserve">
+    <value>PowerToys Run</value>
+  </data>
+  <data name="General_Experimentation.Header" xml:space="preserve">
+    <value>Experimentation</value>
+  </data>
+  <data name="GeneralPage_EnableExperimentation.Description" xml:space="preserve">
+    <value>Note: Only Windows Insider builds may be selected for experimentation</value>
+  </data>
+  <data name="GeneralPage_EnableExperimentation.Header" xml:space="preserve">
+    <value>Allow experimentation with new features</value>
+  </data>
+  <data name="GPO_ExperimentationIsDisallowed.Title" xml:space="preserve">
+    <value>The system administrator has disabled experimentation.</value>
+  </data>
+  <data name="Shell_PastePlain.Content" xml:space="preserve">
+    <value>Paste As Plain Text</value>
+    <comment>Product name: Navigation view item name for Paste as Plain Text</comment>
+  </data>
+  <data name="PastePlain.ModuleDescription" xml:space="preserve">
+    <value>Paste As Plain Text is a quick shortcut for pasting the text contents of your clipboard without formatting. Note: the formatted text in the clipboard is replaced with the unformatted text.</value>
+  </data>
+  <data name="PastePlain.ModuleTitle" xml:space="preserve">
+    <value>Paste As Plain Text</value>
+  </data>
+  <data name="PastePlain_Cancel" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="PastePlain_EnableToggleControl_HeaderText.Header" xml:space="preserve">
+    <value>Enable Paste As Plain Text</value>
+  </data>
+  <data name="Oobe_PastePlain.Description" xml:space="preserve">
+    <value>Paste As Plain Text strips rich formatting from your clipboard data and pastes it as non-formatted text.</value>
+  </data>
+  <data name="Oobe_PastePlain.Title" xml:space="preserve">
+    <value>Paste As Plain Text</value>
+  </data>
+  <data name="Oobe_PastePlain_HowToUse.Text" xml:space="preserve">
+    <value>to paste your clipboard data as plain text. Note: this will replace the formatted text in your clipboard with the plain text.</value>
+  </data>
+  <data name="AllAppsTxt.Text" xml:space="preserve">
+    <value>All apps</value>
+  </data>
+  <data name="BackBtn.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BackLabel.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BugReportBtn.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Bug report</value>
+  </data>
+  <data name="BugReportTooltip.Text" xml:space="preserve">
+    <value>Bug report</value>
+  </data>
+  <data name="DocsBtn.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="DocsTooltip.Text" xml:space="preserve">
+    <value>Documentation</value>
+  </data>
+  <data name="FZEditorString" xml:space="preserve">
+    <value>FancyZones Editor</value>
+    <comment>Do not localize this string</comment>
+  </data>
+  <data name="MoreBtn.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="MoreLabel.Text" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="SettingsBtn.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsTooltip.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ShortcutsTxt.Text" xml:space="preserve">
+    <value>Shortcuts</value>
+  </data>
+  <data name="UpdateAvailable.Title" xml:space="preserve">
+    <value>Update available</value>
+  </data>
+  <data name="FileExplorerPreview_Toggle_Monaco_Max_File_Size.Header" xml:space="preserve">
+    <value>Maximum file size to preview</value>
+    <comment>Size refers to the disk space used by a file</comment>
+  </data>
+  <data name="FileExplorerPreview_Toggle_Monaco_Max_File_Size.Description" xml:space="preserve">
+    <value>The maximum size, in kilobytes, for files to be displayed. This is a safety mechanism to prevent loading large files into RAM.</value>
+    <comment>"RAM" refers to random access memory; "size" refers to disk space; "bytes" refer to the measurement unit</comment>
+  </data>
+  <data name="MouseUtils_MouseJump.Description" xml:space="preserve">
+    <value>Quickly move the mouse pointer long distances.</value>
+    <comment>"Mouse Jump" is the name of the utility. Mouse is the hardware mouse.</comment>
+  </data>
+  <data name="MouseUtils_MouseJump.Header" xml:space="preserve">
+    <value>Mouse Jump</value>
+    <comment>Refers to the utility name</comment>
+  </data>
+  <data name="MouseUtils_MouseJump_ActivationShortcut.Description" xml:space="preserve">
+    <value>Customize the shortcut to turn on or off this mode</value>
+  </data>
+  <data name="MouseUtils_MouseJump_ActivationShortcut.Header" xml:space="preserve">
+    <value>Activation shortcut</value>
+  </data>
+  <data name="MouseUtils_Enable_MouseJump.Header" xml:space="preserve">
+    <value>Enable Mouse Jump</value>
+    <comment>"Mouse Jump" is the name of the utility.</comment>
+  </data>
+  <data name="GPO_AutoDownloadUpdatesIsDisabled.Title" xml:space="preserve">
+    <value>The system administrator has disabled the automatic download of updates.</value>
+  </data>
+  <data name="Hosts_Toggle_LoopbackDuplicates.Description" xml:space="preserve">
+    <value>127.0.0.1, ::1, ...</value>
+    <comment>"127.0.0.1 and ::1" are well known loopback addresses, do not loc</comment>
+  </data>
+  <data name="Hosts_Toggle_LoopbackDuplicates.Header" xml:space="preserve">
+    <value>Consider loopback addresses as duplicates</value>
   </data>
 </root>
